@@ -29,7 +29,6 @@ From smaller to bigger (using [Gradle rules](https://docs.gradle.org/current/use
 While the above works well with Gradle, it is incompatible with SemVer:
 * Gradle has a [special rule](https://github.com/gradle/gradle/blob/5ec3f672ed600a86280be490395d70b7bc634862/subprojects/dependency-management/src/main/java/org/gradle/api/internal/artifacts/ivyservice/ivyresolve/strategy/StaticVersionComparator.java#L32) for `"dev"` where dev is always before anything else, even `"alpha"`
 * Gradle also has a special rule for `"SNAPSHOT"` where the comparison is [case-insensitive](https://github.com/gradle/gradle/blob/5ec3f672ed600a86280be490395d70b7bc634862/subprojects/dependency-management/src/main/java/org/gradle/api/internal/artifacts/ivyservice/ivyresolve/strategy/StaticVersionComparator.java#L80). `"SNAPSHOT"` will come after `"alpha"` even though it shouldn't be in pure ASCII sort order.
-* Gradle allows leading zeroes (`"-alpha01"`). SemVer is explicit that: `"Numeric identifiers MUST NOT include leading zeroes"`
 
 All in all, [SemVer](https://semver.org/) would sort versions in the following order:
 
