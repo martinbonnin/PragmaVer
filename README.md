@@ -1,4 +1,9 @@
-# PragmaVer
+
+# ~~PragmaVer~~
+
+> [!IMPORTANT]
+> 2024-04: I changed my mind and use proper semver now. See [martinbonnin/library-guidelines](https://github.com/martinbonnin/library-guidelines)
+
 ### A pragmatic versioning scheme for artifacts consumed by Gradle builds
 
 I recently had [an interesting discussion](https://kotlinlang.slack.com/archives/C8C4JTXR7/p1626082769022200) about semantic versioning for Maven artifacts. While there seem to be a consensus for versions in the form of `MAJOR.MINOR.PATCH`, things become more complex and interesting when pre-release are involved and multiple forms are found in the wild. For example:
